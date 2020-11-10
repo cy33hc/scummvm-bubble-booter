@@ -28,7 +28,7 @@ int main(int argc, const char *argv[]) {
 		char uri[512];
 		replace_newline(path);
 		replace_newline(game_id);
-		snprintf(uri, 512, "psgm:play?titleid=%s&param=%s&param2=%s", "VSCU00001", path, game_id);
+		snprintf(uri, 512, "psgm:play?titleid=%s&path=%s&game_id=%s", "VSCU00001", path, game_id);
 		sceAppMgrLaunchAppByUri(0xFFFFF, uri);
 		sceKernelDelayThread(1000);
 	}
